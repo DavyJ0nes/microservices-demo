@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/microservices-demo/microservices-demo.svg?branch=master)](https://travis-ci.org/microservices-demo/microservices-demo)
+> Notes about how this service could be improved can be found [here](./docs/notes.md)
 
 # Sock Shop : A Microservice Demo Application
 
