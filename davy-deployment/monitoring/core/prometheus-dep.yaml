@@ -22,7 +22,7 @@ spec:
       serviceAccount: prometheus
       containers:
       - name: prometheus
-        image: prom/prometheus:v1.5.2
+        image: prom/prometheus:v2.3.1
         args:
         - '-storage.local.retention=360h'
         - '-storage.local.memory-chunks=1048576'

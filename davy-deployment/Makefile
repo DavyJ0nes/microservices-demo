@@ -23,7 +23,7 @@ create-gcp-service-account:
 	gcloud iam service-accounts keys create service-account.json\
 		--iam-account clouddns@${DNS_GCP_PROJECT}.iam.gserviceaccount.com  --project=${DNS_GCP_PROJECT}
 	kubectl create secret generic clouddns-service-account \
-		--from-file service-account.json -n ${NAMESPACE}
+		--from-file service-account.json -n monitoring
 
 .PHONY: deploy-nginx
 deploy-nginx:
