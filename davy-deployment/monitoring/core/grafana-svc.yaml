@@ -7,9 +7,10 @@ metadata:
     app: grafana
     component: core
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-  - protocol: TCP
+  - name: grafana
+    protocol: TCP
     port: 80
     targetPort: 3000
   selector:
