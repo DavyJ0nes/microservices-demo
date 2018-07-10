@@ -4,8 +4,13 @@ NAMESPACE = sock-shop
 DEPLOYMENT_GCP_PROJECT = interview-davy-socks
 DNS_GCP_PROJECT = davyj0nes-demo
 USER_GCP_EMAIL = davyrogerjones@gmail.com
+PROM_POD = 	$(shell kubectl get pods -n monitoring | grep Running | grep prometheus-deployment | awk '{print $$1}')
 
 #### COMMANDS ####
+
+.PHONY: port-forward-prom
+port-forward-prom:
+	kubectl port-forward ${PROM_POD} 10090:9090 -n monitoring
 
 .PHONY: create-cluster-admin
 create-cluster-admin:
